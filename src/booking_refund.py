@@ -6,5 +6,4 @@ def is_refundable(hours_before_checkin, flexible_rate):
     if hours_before_checkin < 0:
         raise ValueError("argument outside permitted range")
     
-    # return flexible_rate and hours_before_checkin > 48 Original code
-    return flexible_rate and hours_before_checkin >= 48 # This line has been modified to include the case where hours_before_checkin is exactly 48, allowing for a refund in that scenario.
+    return flexible_rate and hours_before_checkin > 48

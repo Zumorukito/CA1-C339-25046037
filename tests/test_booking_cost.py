@@ -10,6 +10,7 @@ from src.booking_cost import calculate_booking_cost
     (30, 10000, 300000),
     (2, 0, 0),
 ])
+
 def test_booking_cost_returns_expected_result(nights, rate, expected_result):
     result = calculate_booking_cost(nights, rate)
     assert result == expected_result
@@ -30,6 +31,7 @@ def test_booking_cost_returns_expected_result(nights, rate, expected_result):
     (2, False, TypeError),
     (2, None, TypeError),
 ])
+
 def test_booking_cost_invalid_input_raises_error(nights, rate, error):
     with pytest.raises(error):
         calculate_booking_cost(nights, rate)

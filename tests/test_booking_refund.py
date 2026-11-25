@@ -12,6 +12,7 @@ from src.booking_refund import is_refundable
     (48, False, False),
     (49, False, False),
 ])
+
 def test_refund_returns_expected_result(hours, flexible, expected_result):
     result = is_refundable(hours, flexible)
     assert result is expected_result
@@ -29,6 +30,7 @@ def test_refund_returns_expected_result(hours, flexible, expected_result):
     (48, 0, TypeError),
     (48, None, TypeError),
 ])
+
 def test_refund_invalid_input_raises_error(hours, flexible, error):
     with pytest.raises(error):
         is_refundable(hours, flexible)
