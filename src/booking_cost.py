@@ -8,4 +8,8 @@ def calculate_booking_cost(nights, nightly_rate_cents):
     
     charged_nights = nights - 1 if nights >= 7 else nights
     
+<<<<<<< HEAD
     return charged_nights * nightly_rate_cents
+=======
+    return charged_nights * nightly_rate_cents
+>>>>>>> a6de9dd (nothing)
